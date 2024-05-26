@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabuleiro{
+    width: 500px;
+    height: 500px;
+}
+
+.linha{
+    width: 100%;
+    height: 33.33%;
+    display: flex;   
+}
+
+.espaco{
+    width: 33.33%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.espaco img {
+    width: 50%;
+    height: auto;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00aa00;
+    outline: none;
+    border: none;
+    transition: .3s;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #058305;
+}
+
+#status {
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
