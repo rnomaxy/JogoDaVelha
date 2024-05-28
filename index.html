@@ -7,47 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="status">
-        <button onclick="limparTabuleiro()"> Reiniciar </button>
-        <p id="status-p"> JOGO EM ANDAMENTO </p>
+    <div id="game">
+        <div id="status">
+            <button onclick="limparTabuleiro()"> Apagar </button>
+            <p id="status-p"> JOGO EM ANDAMENTO </p>
+        </div>
+        <div id="tabuleiro">
+            <div class="linha">
+                <div style="border-bottom: 1px solid black; border-right: 1px solid black;" class="espaco" id="1" onclick="jogada(1)">
+                    <input type="hidden" value="empty" id="input-1">
+                </div>
+                <div style="border-bottom: 1px solid black; border-right: 1px solid black;" class="espaco" id="2" onclick="jogada(2)">
+                    <input type="hidden" value="empty" id="input-2">
+                </div>
+                <div style="border-bottom: 1px solid black;" class="espaco" id="3" onclick="jogada(3)">
+                    <input type="hidden" value="empty" id="input-3">
+                </div>
+            </div>
+    
+            <div class="linha">
+                <div style="border-bottom: 1px solid black; border-right: 1px solid black" class="espaco" id="4" onclick="jogada(4)">
+                    <input type="hidden" value="empty" id="input-4">
+                </div>
+                <div style="border-bottom: 1px solid black; border-right: 1px solid black;" class="espaco" id="5" onclick="jogada(5)">
+                    <input type="hidden" value="empty" id="input-5">
+                </div>
+                <div style="border-bottom: 1px solid black;" class="espaco" id="6" onclick="jogada(6)">
+                    <input type="hidden" value="empty" id="input-6">
+                </div>
+            </div>
+    
+            <div class="linha">
+                <div style="border-right: 1px solid black;" class="espaco" id="7" onclick="jogada(7)">
+                    <input type="hidden" value="empty" id="input-7">
+                </div>
+                <div style="border-right: 1px solid black;" class="espaco" id="8" onclick="jogada(8)">
+                    <input type="hidden" value="empty" id="input-8">
+                </div>
+                <div class="espaco" id="9" onclick="jogada(9)">
+                    <input type="hidden" value="empty" id="input-9">
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="tabuleiro">
-        <div class="linha">
-            <div class="espaco" id="1" onclick="jogada(1)">
-                <input type="hidden" value="empty" id="input-1">
-            </div>
-            <div class="espaco" id="2" onclick="jogada(2)">
-                <input type="hidden" value="empty" id="input-2">
-            </div>
-            <div class="espaco" id="3" onclick="jogada(3)">
-                <input type="hidden" value="empty" id="input-3">
-            </div>
-        </div>
 
-        <div class="linha">
-            <div class="espaco" id="4" onclick="jogada(4)">
-                <input type="hidden" value="empty" id="input-4">
-            </div>
-            <div class="espaco" id="5" onclick="jogada(5)">
-                <input type="hidden" value="empty" id="input-5">
-            </div>
-            <div class="espaco" id="6" onclick="jogada(6)">
-                <input type="hidden" value="empty" id="input-6">
-            </div>
-        </div>
-
-        <div class="linha">
-            <div class="espaco" id="7" onclick="jogada(7)">
-                <input type="hidden" value="empty" id="input-7">
-            </div>
-            <div class="espaco" id="8" onclick="jogada(8)">
-                <input type="hidden" value="empty" id="input-8">
-            </div>
-            <div class="espaco" id="9" onclick="jogada(9)">
-                <input type="hidden" value="empty" id="input-9">
-            </div>
-        </div>
-    </div>
     <script src="index.js"></script>
 </body>
 </html>

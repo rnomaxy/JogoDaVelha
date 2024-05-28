@@ -45,8 +45,8 @@ function jogada(id) {
                     partidaExistindo = 0;
                 }
             }   
-    
-            if(jogadas++ == 9) {
+
+            if(jogadas++ == 8 && !verificaVencedor("x")) {
                 document.getElementById("status-p").textContent = "DEU VELHA"
             }
         }
@@ -60,6 +60,10 @@ function verificaVencedor(vez) {
     if(vez=="x") {
         for(let i = 0; i < formasDeGanhar.length; i++) {
             if(formasDeGanhar[i].input.value == "x" && formasDeGanhar[i].segundoInput.value == "x" && formasDeGanhar[i].terceiroInput.value == "x") {
+                formasDeGanhar[i].input.closest('.espaco').classList.add('orange');
+                formasDeGanhar[i].segundoInput.closest('.espaco').classList.add('orange');
+                formasDeGanhar[i].terceiroInput.closest('.espaco').classList.add('orange');
+
                 return true;
             }
         }
@@ -67,6 +71,10 @@ function verificaVencedor(vez) {
     else if(vez == "circulo") {
         for(let i = 0; i < formasDeGanhar.length; i++) {
             if(formasDeGanhar[i].input.value == "circulo" && formasDeGanhar[i].segundoInput.value == "circulo" && formasDeGanhar[i].terceiroInput.value == "circulo") {
+                formasDeGanhar[i].input.closest('.espaco').classList.add('orange');
+                formasDeGanhar[i].segundoInput.closest('.espaco').classList.add('orange');
+                formasDeGanhar[i].terceiroInput.closest('.espaco').classList.add('orange');
+
                 return true;
             }
         }
@@ -85,6 +93,7 @@ function limparTabuleiro() {
     for(let i = 0; i < inputs.length; i++) {
         if(inputs[i].value != "empty") {
             inputs[i].value = "empty";
+            inputs[i].closest('.espaco').classList.remove('orange');
             tipo_jogada = "x";
             document.getElementById("status-p").textContent = "PARTIDA EM ANDAMENTO";
             jogadas = 0;

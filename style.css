@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: poppins;
+    src: url(./font/Poppins-Regular.ttf);
+}
+
 body{
     width: 100vw;
     height: 100vh;
@@ -11,6 +16,23 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+    background: linear-gradient(to bottom, #ffa22d, #fff38a);
+}
+
+.orange {
+    background-color: #ffa22d;
+    transition: .4s;
+}
+
+#game {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-shadow: 1px 5px 12px 4px rgba(0, 0, 0, 0.116);
 }
 
 #tabuleiro{
@@ -27,7 +49,6 @@ body{
 .espaco{
     width: 33.33%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,18 +61,19 @@ body{
 
 button {
     width: 200px;
-    height: 40px;
+    height: 45px;
     border-radius: 5px;
-    background-color: #00aa00;
+    background-color: #050505;
     outline: none;
     border: none;
     transition: .3s;
     color: white;
     cursor: pointer;
+    font-family: poppins;
 }
 
 button:hover {
-    background-color: #058305;
+    background-color: #1a1a1a;
 }
 
 #status {
